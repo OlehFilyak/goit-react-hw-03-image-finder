@@ -1,8 +1,9 @@
+import css from "./ImageGalleryItem.module.css";
 function ImageGallery() {
   return (
     <div>
-      <li className="ImageGalleryItem">
-        <img src="" alt="" className="ImageGalleryItem-image" />
+      <li className={css.ImageGalleryItem}>
+        <img src="" alt="" className={css.mageGalleryItemImage} />
       </li>
     </div>
   );

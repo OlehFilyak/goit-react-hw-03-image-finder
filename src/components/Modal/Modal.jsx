@@ -1,8 +1,9 @@
+import css from "./Modal.module.css";
 function Modal() {
   return (
     <div>
-      <div className="Overlay">
-        <div className="Modal">
+      <div className={css.Overlay}>
+        <div className={css.Modal}>
           <img src="" alt="" />
         </div>
       </div>

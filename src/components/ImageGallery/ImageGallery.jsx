@@ -1,7 +1,8 @@
+import css from "./ImageGallery.module.css";
 function ImageGallery() {
   return (
     <div>
-      <ul className="ImageGallery"></ul>
+      <ul className={css.ImageGallery}></ul>
     </div>
   );
 }
