@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import PropTypes from "prop-types";
 
 import css from "./Modal.module.css";
 
@@ -34,3 +35,9 @@ function Modal({ selectedImg, tags, onClose }) {
 }
 
 export default Modal;
+
+Modal.propTypes = {
+  onClose: PropTypes.func.isRequired,
+  tags: PropTypes.string.isRequired,
+  selectedImage: PropTypes.string.isRequired,
+};

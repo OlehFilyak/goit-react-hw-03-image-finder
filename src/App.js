@@ -64,7 +64,7 @@ export default function App() {
     setPageQuery((prevPage) => prevPage + 1);
   };
 
-  const handleSelectedImage = (largeImageUrl, tags) => {
+  const handleSelectImage = (largeImageUrl, tags) => {
     setSelectedImg(largeImageUrl);
     setAltSelectedImg(tags);
   };
@@ -91,7 +91,7 @@ export default function App() {
       <>
         <Searchbar onSubmit={handleFormSubmit} />
         <Loader />
-        <ImageGallery images={images} selectedImage={handleSelectedImage} />
+        <ImageGallery images={images} handleSelectImage={handleSelectImage} />
         {images.length > 0 && <LoadMoreButton onClick={loadMoreBtnClick} />}
       </>
     );
@@ -101,7 +101,7 @@ export default function App() {
     return (
       <>
         <Searchbar onSubmit={handleFormSubmit} />
-        <ImageGallery images={images} selectedImage={handleSelectedImage} />
+        <ImageGallery images={images} handleSelectImage={handleSelectImage} />
         {pageQuery > 1 && scrollDown()}
         {selectedImg && (
           <Modal
