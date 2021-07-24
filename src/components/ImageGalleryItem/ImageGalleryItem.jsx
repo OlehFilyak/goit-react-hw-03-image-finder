@@ -1,12 +1,17 @@
 import css from "./ImageGalleryItem.module.css";
-function ImageGallery() {
-  return (
-    <div>
-      <li className={css.ImageGalleryItem}>
-        <img src="" alt="" className={css.mageGalleryItemImage} />
-      </li>
-    </div>
-  );
-}
 
-export default ImageGallery;
+const ImageGallaryItem = ({ alt, url, id, selectedImage }) => {
+  return (
+    <li className={css.ImageGalleryItem}>
+      <img
+        onClick={selectedImage}
+        src={url}
+        alt={alt}
+        className={css.ImageGalleryItem__image}
+        id={id}
+      />
+    </li>
+  );
+};
+
+export default ImageGallaryItem;
